@@ -2,10 +2,11 @@
   "name": "ecommerce",
   "private": true,
   "version": "0.0.0",
-
+  "homepage": "https://username.github.io/login/",
   "type": "module",
   "scripts": {
     "dev": "vite",
+ 
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
