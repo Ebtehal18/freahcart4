@@ -55,15 +55,15 @@ console.log(respnse)
   }
   // remove cart item 
 function RemoveWishListItem(id){
-  return  axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${id}`,{headers:token})
+    axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${id}`,{headers:token})
     .then(response=>{
     console.log(response)
     getWishList()
-   return response
+   
             })
             .catch(error=>{
             console.log(error)
-        return error
+        
             })
 }
 

@@ -59,11 +59,11 @@ function RemoveWishListItem(id){
     .then(response=>{
     console.log(response)
     getWishList()
-   return response
+   
             })
             .catch(error=>{
             console.log(error)
-        return error
+        
             })
 }
 

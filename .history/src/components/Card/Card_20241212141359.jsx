@@ -103,7 +103,7 @@ async function handelAddToWish(id) {
 
 
 </Link>
-<span onClick={()=>handelAddToWish(recentPro.id)} className='group-hover:opacity-100 opacity-0 w-9 h-9 bg-green-400 text-white flex justify-center items-center rounded-full absolute top-3 end-3 transition-all duration-500 cursor-pointer dark:bg-orange-500 ' >
+<span onClick={()=>(recentPro.id)} className='group-hover:opacity-100 opacity-0 w-9 h-9 bg-green-400 text-white flex justify-center items-center rounded-full absolute top-3 end-3 transition-all duration-500 cursor-pointer dark:bg-orange-500 ' >
 {isAddedToWish ? (
             <i className="fa-solid fa-heart text-3xl text-green-500 dark:text-orange-500"></i>
           ) : (

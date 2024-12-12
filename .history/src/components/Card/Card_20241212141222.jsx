@@ -8,7 +8,7 @@ import { useContext } from 'react'
 
 export default function Card({recentPro}) {
   let {addToCart}=useContext(CartContext)
-let {wishlist,RemoveWishListItem}=useContext(WishListContext)
+let {wishlist}=useContext(WishListContext)
 let [isAddedToWish, setIsAddToWish] = useState(false);
 // console.log(addToCart)
 
@@ -50,33 +50,7 @@ toast.dismiss(toasting)
 }
 }
 
-async function removeWishProduct(id) {
-  let toasting = toast.loading("Loading....");
-  let { data } = await RemoveWishListItem(id);
 
-  console.log(data);
-  if (data.status === "success") {
-    toast.success(data.message, {
-      style: {
-        backgroundColor: "rgb(14,159,110)",
-        color: "#fff",
-      },
-    });
-    toast.dismiss(toasting);
-    setIsAddToWish(false);
-  } else {
-    toast.dismiss(toasting);
-    toast.error(data.message);
-  }
-}
-
-async function handelAddToWish(id) {
-  if (isAddedToWish) {
-    removeWishProduct(id);
-  } else {
-    addToWishProduct(id); 
-  }
-}
   return <>
  <div className='shadow-md  overflow-hidden relative  group dark:bg-white rounded-lg ' >
 <Link to={`/productdetails/${recentPro.id}/${recentPro?.category?.name}`} className='  '>
@@ -103,13 +77,8 @@ async function handelAddToWish(id) {
 
 
 </Link>
-<span onClick={()=>handelAddToWish(recentPro.id)} className='group-hover:opacity-100 opacity-0 w-9 h-9 bg-green-400 text-white flex justify-center items-center rounded-full absolute top-3 end-3 transition-all duration-500 cursor-pointer dark:bg-orange-500 ' >
-{isAddedToWish ? (
-            <i className="fa-solid fa-heart text-3xl text-green-500 dark:text-orange-500"></i>
-          ) : (
-            <i className="fa-regular fa-heart text-3xl  text-green-500 dark:text-orange-500"></i>
-          )}
-  </span>
+<span onClick={()=>addToWishProduct(recentPro.id)} className='group-hover:opacity-100 opacity-0 w-9 h-9 bg-green-400 text-white flex justify-center items-center rounded-full absolute top-3 end-3 transition-all duration-500 cursor-pointer dark:bg-orange-500 ' >
+  <i className='fa-solid fa-heart text-xl'></i></span>
 <div className=' w-[90%]  mx-auto mt-1 mb-4'>
 <button onClick={()=>addToCartProduct(recentPro.id)} className='btn group-hover:translate-y-[0] group-hover:opacity-100 opacity-0 translate-y-[100%] transition-all duration-500 dark:border-orange-500 dark:hover:bg-orange-500 '>+ add to cart</button> 
 </div>

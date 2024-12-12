@@ -103,12 +103,7 @@ async function handelAddToWish(id) {
 
 
 </Link>
-<span onClick={()=>handelAddToWish(recentPro.id)} className='group-hover:opacity-100 opacity-0 w-9 h-9 bg-green-400 text-white flex justify-center items-center rounded-full absolute top-3 end-3 transition-all duration-500 cursor-pointer dark:bg-orange-500 ' >
-{isAddedToWish ? (
-            <i className="fa-solid fa-heart text-3xl text-green-500 dark:text-orange-500"></i>
-          ) : (
-            <i className="fa-regular fa-heart text-3xl  text-green-500 dark:text-orange-500"></i>
-          )}
+<span onClick={()=>addToWishProduct(recentPro.id)} className='group-hover:opacity-100 opacity-0 w-9 h-9 bg-green-400 text-white flex justify-center items-center rounded-full absolute top-3 end-3 transition-all duration-500 cursor-pointer dark:bg-orange-500 ' >
   </span>
 <div className=' w-[90%]  mx-auto mt-1 mb-4'>
 <button onClick={()=>addToCartProduct(recentPro.id)} className='btn group-hover:translate-y-[0] group-hover:opacity-100 opacity-0 translate-y-[100%] transition-all duration-500 dark:border-orange-500 dark:hover:bg-orange-500 '>+ add to cart</button> 
