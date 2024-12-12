@@ -104,7 +104,7 @@ validationSchema:validate
 
 <div className='flex items-center justify-between'>
 <button disabled={!formik.isValid||!formik.dirty?true:false} type="submit" className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800  disabled:bg-gray-300 dark:disabled:bg-gray-300 disabled:cursor-not-allowed">{loading?<i className='fa-solid fa-spinner px-1 fa-spin'></i>:'Login'}</button>
-<p className='font-semibold cursor-pointer dark:text-white'><Link to='/forgetpassword'>Forget PassWord?</Link></p>
+<p className='font-semibold cursor-pointer text-white'><Link to='/forgetpassword'>Forget PassWord?</Link></p>
 
 </div>
 <p className='mt-2 dark:text-white'>didn't have account yet ? <span className='font-semibold dark:text-white'><Link to='/register'>Register</Link></span></p>
