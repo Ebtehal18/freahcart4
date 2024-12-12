@@ -17,8 +17,8 @@ axios.post(`https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords`,val)
   console.log(res)
   toast.success(res.data.message)
    setTimeout(() => {
-    navigate('/verifyrestcode')
-   }, 1000);
+    
+   }, timeout);
 
 })
 .catch(error=>{

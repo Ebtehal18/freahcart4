@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import toast from 'react-hot-toast'
-import * as Yup from 'yup'
+
 
 export default function VerifyRestCode() {
    let navigate =useNavigate() 
@@ -17,7 +17,9 @@ axios.post(`https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`,val)
 .then(res=>{
 
   toast.success('Your can Reset The newpassword')
-navigate('/resetpassword')
+setTimeout(()=>{
+  navigate('/resetpassword')
+})
 
 })
 .catch(error=>{
@@ -28,17 +30,14 @@ navigate('/resetpassword')
   setLoading(false)
 })
 } 
-let validate=Yup.object().shape({
-  resetCode:Yup.string().required('code is required'),
-})
+
 let formik=useFormik({
   initialValues:
     {
   resetCode:""
   },
 
-  onSubmit:submitVerifyRestCode,
-  validationSchema:validate
+  onSubmit:submitVerifyRestCode
 })
 
 return<>

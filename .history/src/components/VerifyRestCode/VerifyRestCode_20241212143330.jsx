@@ -17,7 +17,9 @@ axios.post(`https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`,val)
 .then(res=>{
 
   toast.success('Your can Reset The newpassword')
-navigate('/resetpassword')
+setTimeout(()=>{
+  navigate('/resetpassword')
+},1000)
 
 })
 .catch(error=>{
@@ -38,7 +40,7 @@ let formik=useFormik({
   },
 
   onSubmit:submitVerifyRestCode,
-  validationSchema:validate
+  v
 })
 
 return<>

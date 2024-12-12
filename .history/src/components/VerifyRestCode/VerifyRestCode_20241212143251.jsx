@@ -17,7 +17,9 @@ axios.post(`https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`,val)
 .then(res=>{
 
   toast.success('Your can Reset The newpassword')
-navigate('/resetpassword')
+setTimeout(()=>{
+  navigate('/resetpassword')
+},1000)
 
 })
 .catch(error=>{
@@ -29,7 +31,7 @@ navigate('/resetpassword')
 })
 } 
 let validate=Yup.object().shape({
-  resetCode:Yup.string().required('code is required'),
+  email:Yup.string().required('email is required').email('Email is not valid'),
 })
 let formik=useFormik({
   initialValues:
@@ -37,8 +39,7 @@ let formik=useFormik({
   resetCode:""
   },
 
-  onSubmit:submitVerifyRestCode,
-  validationSchema:validate
+  onSubmit:submitVerifyRestCode
 })
 
 return<>

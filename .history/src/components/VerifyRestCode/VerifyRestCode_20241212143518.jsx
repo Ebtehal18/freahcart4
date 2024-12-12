@@ -19,6 +19,7 @@ axios.post(`https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`,val)
   toast.success('Your can Reset The newpassword')
 navigate('/resetpassword')
 
+
 })
 .catch(error=>{
   console.log(error)
