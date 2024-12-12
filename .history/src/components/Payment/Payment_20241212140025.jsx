@@ -51,7 +51,7 @@ function handelOnlinePayment(values){
         shippingAddress:values
       }
       setLoadingonline(true)
-  axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://freahcart4.vercel.app`,apiObj,{
+  axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://freahcart4.vercel.app/`,apiObj,{
     headers:token
   })
   .then(response=>{
