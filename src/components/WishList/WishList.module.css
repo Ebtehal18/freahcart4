@@ -1,0 +1,23 @@
+tr.wish{
+    display: flex;
+    flex-direction: column;
+  }
+  thead{
+  display: none;
+  }
+  .close{
+    position: absolute;
+    top: 5%;
+    right: 6.5%;
+  }
+  @media screen and (min-width:768px){
+    thead{
+      display: table-header-group;
+      }
+      tr.wish{
+        display: table-row;
+      }
+      .close{
+        position: static;
+      }
+  }

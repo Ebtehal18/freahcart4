@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+#root{
+  overflow-x: hidden;
+}
+body,html {
+  overflow-x: hidden;
+
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+/* body{
+
+} */
+.row{
+  @apply flex flex-wrap 
+}
+
+ @layer components{
+  .btn{
+    @apply w-full  hover:bg-green-600 hover:text-white  rounded-md px-3 border-green-500 border py-1
+  }
+ }
+.form-control{
+  @apply px-2 py-1 rounded-md focus:outline-none border border-slate-400 border-opacity-50 focus:border-primary-600 focus:caret-primary-700
+}
+html.dark {
+  background-color: #100e0eea; 
+
+}
+html.dark .slick-dots li button:before {
+  color: #ff8a4c;
+}
+.slick-prev:before,
+ .slick-next:before{
+  color:#e31414;
+  font-size: 24px
+
+ 
+}
+html.dark .slick-prev:before,
+html.dark .slick-next:before{
+  color: white;
+}
+@media screen and (max-width:1024px){
+  .slick-prev{
+    left: -6px;
+    z-index: 5;
+  }
+  .slick-next{
+right: -6px;
+z-index: 5;
+  }
+}

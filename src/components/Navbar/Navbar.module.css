@@ -1,0 +1,21 @@
+@media screen and (min-width:1023px) {
+    .links{
+        flex-direction: row;
+        display: flex;
+   
+        align-items: center;
+        justify-content: center;
+   
+    }
+}
+@media screen and (max-width:1022px) {
+    .links{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+       
+        display: flex;
+        background-color: #e5e7eb;
+        
+    }
+}

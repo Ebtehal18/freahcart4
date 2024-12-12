@@ -1,0 +1,38 @@
+tr.cart{
+    display: flex;
+    flex-direction: column;
+  }
+  thead{
+  display: none;
+  }
+  .close{
+    position: absolute;
+    top: 10%;
+    right: 6.5%;
+  }
+  .quantity{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  td{
+    text-align: center;
+  }
+  @media screen and (min-width:768px){
+    thead{
+      display: table-header-group;
+      }
+      tr.cart{
+        display: table-row;
+      }
+      .close{
+        position: static;
+      }
+      .quantity{
+        display: table-cell;
+      }
+      td{
+        text-align: left;
+      }
+  }
