@@ -10,7 +10,7 @@ export default function RecentProuducts() {
 let [search,setSearch]=useState("")
 let {data,isError,isLoading}=  UseProducts()
 
-let filteredProducts=data?.data?.data?.filter((product)=>product.title.toLowerCase().includes(search.toLowerCase()))
+let filteredProducts=data.data?.data?.filter((product)=>product.title.toLowerCase().includes(search.toLowerCase()))
 if(isLoading){
   return  <Loading/>  
 }
