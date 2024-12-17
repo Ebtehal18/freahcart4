@@ -4,7 +4,7 @@ A fully functional eCommerce website with user authentication, product managemen
 
 ## Live Demo
 
-Check out the live demo of the eCommerce website at [Live Demo](https://ebtehal18.github.io/login/).
+Check out the live demo of the eCommerce website at [Live Demo](https://freahcart4.vercel.app).
 
 ## Features
 
